@@ -1,1 +1,0 @@
-2026/05/26 16:43:12 [error] 10752#15444: *1 CreateFile() "C:\Users\Dell\Pictures\docker test\jenkins pipline test\nginx-1.30.2\nginx-1.30.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
