@@ -7,5 +7,12 @@ pipeline {
                 echo 'Hello THIS IS SULAMAN World lol!'
             }
         }
+        stage('Get-NGINX'){
+
+            steps{ 
+
+              echo " ok u got the stage syntax writeg well done sulaman!!"
+            }
+        }
     }
 }
