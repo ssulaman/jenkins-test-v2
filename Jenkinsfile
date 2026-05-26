@@ -2,26 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Checkout') {
             steps {
-                echo 'Hello THIS IS SULAMAN World lol!'
+                checkout scm
             }
         }
-        stage('Get-NGINX-docker'){
-           agent{   
-              docker{
-                  image:'nginx:stable-alpine3.23-perl'    
 
-              }
-           }
-                steps{ 
-
-                    echo " ok u got the stage syntax writeg well done sulaman!!"
-                    sh 'pwd'
-                    sh 'ls -lrt'
-
-                    }
+        stage('Run Nginx Docker') {
+            steps {
+                sh 'docker rm -f nginx-container || true'
+                sh 'docker run -d --name nginx-container -p 8080:80 nginx:latest'
             }
         }
     }
-
+}
