@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('Get-NGINX-docker'){
-            agent{  
+              
               docker{
                   image:'nginx:stable-alpine3.23-perl'    
 
@@ -23,4 +23,4 @@ pipeline {
             }
         }
     }
-}
+
